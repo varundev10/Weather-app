@@ -1,0 +1,514 @@
+body {
+  background: #f5f7fa;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background: #4f8cff;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-text {
+  margin-left: 0.5rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.menu-btn {
+  background: #fff;
+  color: #4f8cff;
+  border: none;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: #eaf0fb;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.tab {
+  background: none;
+  border: none;
+  color: #4f8cff;
+  font-size: 1.1rem;
+  margin: 0 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem 1rem 0 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tab.active, .tab:hover {
+  background: #fff;
+  color: #222;
+  font-weight: bold;
+}
+
+.main-content {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.weather-section {
+  flex: 2;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.controls select {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+.weather-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px rgba(79,140,255,0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.weather-card h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+.weather-date {
+  color: #888;
+  margin-bottom: 1.2rem;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.weather-icon {
+  font-size: 3rem;
+}
+
+.weather-temp {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.weather-desc {
+  font-size: 1.1rem;
+  color: #4f8cff;
+}
+
+.date-selector {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.date-btn {
+  background: #eaf0fb;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #4f8cff;
+  transition: background 0.2s;
+}
+
+.date-btn.active, .date-btn:hover {
+  background: #4f8cff;
+  color: #fff;
+}
+
+.weather-summary {
+  margin-top: 1rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+.sidebar {
+  flex: 1;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px rgba(79,140,255,0.08);
+  padding: 2rem 1.5rem;
+  min-width: 220px;
+  max-width: 300px;
+  height: fit-content;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.7rem;
+}
+
+.sidebar a {
+  color: #4f8cff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Cool hover effects for all buttons and links */
+button,
+.tab,
+.date-btn,
+.menu-btn,
+.current-location-btn,
+.sidebar-link,
+.cool-btn {
+  transition: 
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+button:hover,
+.tab:hover,
+.date-btn:hover,
+.menu-btn:hover,
+.current-location-btn:hover,
+.sidebar-link:hover,
+.cool-btn:hover {
+  background: #4f8cff;
+  color: #fff !important;
+  box-shadow: 0 4px 16px rgba(79,140,255,0.15);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.current-location-btn {
+  margin-left: 1rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 2rem;
+  background: #eaf0fb;
+  color: #4f8cff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.current-location-btn:active {
+  transform: scale(0.98);
+}
+
+.sidebar-link {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 0.7rem;
+  color: #4f8cff;
+  text-decoration: none;
+  font-size: 1rem;
+  background: #eaf0fb;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-link:active {
+  transform: scale(0.98);
+}
+
+.hourly-forecast-section {
+  margin-top: 2rem;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px rgba(79,140,255,0.08);
+  padding: 2rem;
+}
+
+.hourly-table-wrapper {
+  overflow-x: auto;
+}
+
+.hourly-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  min-width: 900px;
+}
+
+.hourly-table th,
+.hourly-table td {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hourly-table th {
+  background: #f5f7fa;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.hourly-table tr td:first-child,
+.hourly-table tr th:first-child {
+  text-align: left;
+  font-weight: 600;
+  background: #f5f7fa;
+}
+
+.hourly-table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 900px) {
+  .hourly-table {
+    font-size: 0.9rem;
+    min-width: 600px;
+  }
+}
+
+.history-tab ul {
+  list-style: none;
+  padding: 0;
+}
+.history-tab li {
+  margin-bottom: 0.5rem;
+}
+.history-tab button.cool-btn {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem;
+}
+
+/* Weather Metrics Cards */
+.weather-metrics {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 220px;
+  max-width: 300px;
+}
+
+.metric-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(79,140,255,0.08);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(79,140,255,0.12);
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.metric-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4f8cff;
+  margin-bottom: 0.25rem;
+}
+
+.metric-status {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.metric-details {
+  font-size: 0.8rem;
+  color: #888;
+  line-height: 1.4;
+}
+
+/* Visibility Icon */
+.visibility-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.visibility-line {
+  height: 3px;
+  background: #4ade80;
+  border-radius: 2px;
+}
+
+.visibility-line:nth-child(1) { width: 20px; }
+.visibility-line:nth-child(2) { width: 25px; }
+.visibility-line:nth-child(3) { width: 30px; }
+
+/* Pressure Graphic */
+.pressure-graphic {
+  position: relative;
+  width: 40px;
+  height: 20px;
+}
+
+.pressure-line {
+  width: 100%;
+  height: 4px;
+  background: #e0e7ff;
+  border-radius: 2px;
+  position: relative;
+}
+
+.pressure-handle {
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 8px;
+  height: 8px;
+  background: #8b5cf6;
+  border-radius: 50%;
+}
+
+/* Wind Compass */
+.wind-compass {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.compass-rose {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #e5e7eb;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compass-n, .compass-e, .compass-s, .compass-w {
+  position: absolute;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #666;
+}
+
+.compass-n { top: 2px; }
+.compass-e { right: 2px; }
+.compass-s { bottom: 2px; }
+.compass-w { left: 2px; }
+
+.wind-arrow {
+  width: 2px;
+  height: 20px;
+  background: #3b82f6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(-50%, -50%);
+}
+
+.wind-arrow::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -2px;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 6px solid #3b82f6;
+}
+
+/* Humidity Bars */
+.humidity-bars {
+  display: flex;
+  gap: 2px;
+  align-items: end;
+  height: 30px;
+}
+
+.humidity-bar {
+  width: 4px;
+  background: #3b82f6;
+  border-radius: 2px;
+  min-height: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .weather-metrics {
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .metric-card {
+    min-width: 200px;
+    flex: 1;
+  }
+}
