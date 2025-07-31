@@ -27,6 +27,9 @@ coverage/
 # nyc test coverage
 .nyc_output
 
+# Dependency directories
+node_modules/
+
 # Optional npm cache directory
 .npm
 
@@ -55,12 +58,4 @@ coverage/
 .Spotlight-V100
 .Trashes
 ehthumbs.db
-Thumbs.db
-
-# Build outputs
-build/
-dist/
-
-# Temporary files
-*.tmp
-*.temp
+Thumbs.db 
