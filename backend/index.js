@@ -36,5 +36,8 @@ app.get('/api/weather/coords', async (req, res) => {
     res.status(404).json({ error: 'Location not found' });
   }
 });
+app.get("/", (req, res) => {
+  res.send("Backend is live! 🌤️");
+});
 
 app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
