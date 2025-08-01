@@ -60,7 +60,7 @@ Thumbs.db
 # Build outputs
 build/
 dist/
-
+.idea
 # Temporary files
 *.tmp
 *.temp
