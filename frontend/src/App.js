@@ -186,9 +186,12 @@ function App() {
                 {error && <p className="error">{error}</p>}
                 {weather && (
                   <>
-                    <h2>
-                      Today weather in {weather.name}, {weather.sys.country}
-                    </h2>
+                    {weather && weather.sys && (
+                      <h2>
+                          Today weather in {weather.name}, {weather.sys.country}
+                      </h2>
+                      )}
+
                     <div className="weather-date">
                       {new Date(weather.dt * 1000).toLocaleDateString(undefined, {
                         weekday: "long",
@@ -262,8 +265,10 @@ function App() {
               </div>
             </div>
             <div className="metric-value">
-              {weather ? `${(weather.visibility / 1000).toFixed(1)} km` : 'N/A'}
+              {weather?.visibility ? `${(weather.visibility / 1000).toFixed(1)} km` : "N/A"}
             </div>
+
+           
             <div className="metric-status">Good</div>
           </div>
 
