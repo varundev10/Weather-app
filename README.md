@@ -2,6 +2,12 @@
 
 A modern, full-stack weather dashboard built with React and Express, styled for a clean and responsive look.
 
+## 🚀 Live Demo
+
+👉 [Live Weather App](https://weather-app-tau-ten-68.vercel.app/)
+
+
+
 ## Features
 
 - Detects your current location and shows weather
@@ -11,9 +17,8 @@ A modern, full-stack weather dashboard built with React and Express, styled for 
   - Temperature (°C)
   - Humidity, wind speed, visibility
   - Weather description and icon
-- Hourly forecast table (static sample)
 - Recent search history (last 7 cities)
-- Quick navigation sidebar
+- Quick sidebar
 - Responsive, modern UI with cool hover effects
 - Backend proxy for secure OpenWeatherMap API key
 - Error and loading state handling
